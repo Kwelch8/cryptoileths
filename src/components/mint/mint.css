@@ -1,15 +1,21 @@
 .mint-image img {
-    width: 100%;
+    width: 50%;
     border: solid black 10px;
     border-radius: 20px;
 }
 
+@font-face {
+    font-family: newerfont;
+    src: url(/src/StrangerThings-Regular.ttf);
+}
+
 .mint-control {
-    background-color: #172A55;
-    /* #172A55 */
-    /* #88CDDB */
+    background-color: white;
+    background-image: url("../../assets/toiletbackground.png");
+    background-size: cover;
     padding-top: 60px;
     padding-bottom: 60px;
+    text-align: "center";
 }
 
 
@@ -18,11 +24,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    padding-bottom: 55px;
 }
 
 .mint-description header {
     font-size: 30px;
-    color: white;
+    color: black;
     font-weight: 900;
     font-style: italic;
     line-height: 50px;
@@ -34,7 +43,7 @@
 }
 
 .mint-description p {
-    color: white;
+    color: black;
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: 900;
@@ -47,16 +56,17 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
+    
 }
 .mint-description .number-control span{
     font-size: 30px;
-    color: white;
+    color: black;
     font-weight: 900;
 }
 
 .ybutton {
-    background-color: #ffffff;
-    color: black;
+    background-color: black;
+    color: #68c2c5;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 15px;
@@ -78,4 +88,33 @@
 .flex-column{
     display: flex;
     flex-direction: column;
+}
+
+.mintimage {
+    width: 100%;
+    height: 100%;
+    border: solid 5px #E8B331;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-image: url(https://github.com/DeadBanditz/banditzsite/blob/main/src/assets/696845.png?raw=true);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 767px) {
+    .mintimage {
+        width: 80%;
+        height: 60%;
+        border: solid 10px #E8B331;
+        padding-left: 100px;
+        padding-right: 100px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        background-image: url(https://github.com/DeadBanditz/banditzsite/blob/main/src/assets/696845.png?raw=true);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
 }

@@ -5,10 +5,17 @@ import { Row, Col, Container } from "react-bootstrap";
 import './team.css';
 
 //import image assets
-import CEOImage from '../../assets/team/dicklogo.png';
-import CTOImage from '../../assets/team/cto.jpeg';
-import CMOImage from '../../assets/team/cmo.jpeg';
-import CFOImage from '../../assets/team/cfo.jpeg'
+import ooz from '../../assets/team/theteam/ooz.png';
+import anthony from '../../assets/team/theteam/anthony.jpeg';
+import davon from '../../assets/team/theteam/davon.jpeg';
+import hamza from '../../assets/team/theteam/hamza.jpeg';
+import kev from '../../assets/team/theteam/kev.png';
+import ricky from '../../assets/team/theteam/ricky.png';
+import marketing from '../../assets/team/theteam/marketing.png';
+import chris from '../../assets/team/theteam/chris.png';
+// import CTOImage from '../../assets/team/about.gif';
+// import CMOImage from '../../assets/team/about.gif';
+// import CFOImage from '../../assets/team/about.gif'
 
 //import Component
 import TeamMember from "./teammember";
@@ -19,10 +26,45 @@ class Team extends React.Component {
         this.state = {
             teams: [
                 {
-                    image: CEOImage,
-                    title: 'Founder',
-                    name: "JENFASSINO"
+                    image: "https://cryptoileths.s3.amazonaws.com/1000.png",
+                    title: 'Lorem Ipsum',
+                    name: "Lorem IpsumLorem Ipsum"
                 },
+                {
+                    image: "https://cryptoileths.s3.amazonaws.com/1001.png",
+                    title: 'Lorem Ipsum',
+                    name: "Lorem IpsumLorem Ipsum"
+                },
+                {
+                    image: "https://cryptoileths.s3.amazonaws.com/1002.png",
+                    title: 'Lorem Ipsum',
+                    name: "Hampter"
+                },
+                {
+                    image: "https://cryptoileths.s3.amazonaws.com/1003.png",
+                    title: 'Lorem Ipsum',
+                    name: "Lorem IpsumLorem Ipsum"
+                },
+                {
+                    image: "https://cryptoileths.s3.amazonaws.com/1004.png",
+                    title: 'Lorem Ipsum',
+                    name: "Lorem IpsumLorem Ipsum"
+                },
+                {
+                    image: "https://cryptoileths.s3.amazonaws.com/1005.png",
+                    title: 'Lorem Ipsum',
+                    name: "Lorem IpsumLorem Ipsum"
+                },
+                {
+                    image: "https://cryptoileths.s3.amazonaws.com/1006.png",
+                    title: 'Lorem Ipsum',
+                    name: "Lorem IpsumLorem Ipsum"
+                },
+                {
+                    image: "https://cryptoileths.s3.amazonaws.com/1007.png",
+                    title: 'Lorem Ipsum',
+                    name: "Lorem IpsumLorem Ipsum"
+                }
             ]
         }
     }
@@ -30,35 +72,68 @@ class Team extends React.Component {
     render() {
         return (
             <div className='team-control' id='team'>
-                <Container style={{ textAlign: "center" }}>
-                    <header><span>OUR</span> FOUNDER</header>
+                <Container style={{ paddingLeft: "50px", paddingRight: "50px", backgroundColor: "white", border: "10px solid darkcyan", borderRadius: "20px" }}>
+                    <header style={{ fontStyle: "italic", color: "black" }}> TEAM MEMBERS </header>
+                    {/* <Row>
+                        <Col className="team-control-card" md={6} xs={12} >
+                            <TeamMember
+                                imageUrl={this.state.teams[0].image}
+                                title={this.state.teams[0].title}
+                                title2={this.state.teams[0].title2}
+                                name={this.state.teams[0].name}
+                            />
+                        </Col>
+                        <Col className="" md={6} xs={12} >
+                            <TeamMember
+                                imageUrl={this.state.teams[1].image}
+                                title={this.state.teams[1].title}
+                                name={this.state.teams[1].name}
+                            />
+                        </Col>
+                    </Row> */}
                     <Row>
-                        {
-                            this.state.teams.map((item, index) => {
-                                return (
-                                    <div>
-                                        <TeamMember 
-                                        key={index}
-                                            imageUrl={item.image}
-                                            title={item.title}
-                                            name={item.name} />
-                                        <Col style={{fontSize: 30}}>
-                                            Dick Pix was
-                                            conceived and
-                                            developed by Jen Fassino,
-                                            a comedy podcaster at Jen AF
-                                            and hairstylist with an extensive
-                                            resume in the hair industry.
-                                            Now, she's apparently dubbed 
-                                            in her NFT community as the 
-                                            "Queen of Dicks." You might know her
-                                             best as 
-                                             <a href="https://instagram.com/jenfassino" style={{textDecoration: "none", color:"white", fontWeight: "bold"}}>@jenfassino</a> on Instagram.
-                                        </Col>
-                                    </div>
-                                );
-                            })
-                        }
+                        <Col className="team-control-card" md={4} xs={12} >
+                            <TeamMember
+                                imageUrl={this.state.teams[2].image}
+                                title={this.state.teams[2].title}
+                                name={this.state.teams[2].name}
+                            />
+                        </Col>
+                        <Col className="team-control-card" md={4} xs={12} >
+                            <TeamMember
+                                imageUrl={this.state.teams[3].image}
+                                title={this.state.teams[3].title}
+                                name={this.state.teams[3].name}
+                            />
+                        </Col>
+                        <Col className="" md={4} xs={12} >
+                            <TeamMember
+                                imageUrl={this.state.teams[4].image}
+                                title={this.state.teams[4].title}
+                                name={this.state.teams[4].name}
+                            />
+                        </Col>
+                        <Col className="team-control-card" md={4} xs={12} >
+                            <TeamMember
+                                imageUrl={this.state.teams[5].image}
+                                title={this.state.teams[5].title}
+                                name={this.state.teams[5].name}
+                            />
+                        </Col>
+                        <Col className="team-control-card" md={4} xs={12} >
+                            <TeamMember
+                                imageUrl={this.state.teams[6].image}
+                                title={this.state.teams[6].title}
+                                name={this.state.teams[6].name}
+                            />
+                        </Col>
+                        <Col className="team-control-card" md={4} xs={12} >
+                            <TeamMember
+                                imageUrl={this.state.teams[7].image}
+                                title={this.state.teams[7].title}
+                                name={this.state.teams[7].name}
+                            />
+                        </Col>
                     </Row>
                 </Container>
             </div>

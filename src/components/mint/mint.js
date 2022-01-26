@@ -39,7 +39,7 @@ function Mint() {
                 gasLimit: 285000 * _amount,
                 to: "0x7181d2038B849A18145eb153b8bEFC552e52c37A", // the address of your contract
                 from: blockchain.account,
-                value: blockchain.web3.utils.toWei((0.077 * _amount).toString(), "ether"),
+                value: blockchain.web3.utils.toWei((0.027 * _amount).toString(), "ether"),
             })
             .once("error", (err) => {
                 console.log(err);
@@ -67,7 +67,7 @@ function Mint() {
 
     const plus_num = () => {
         // const {mintNum} = this.state;
-        if (mintNum >= 25) return;
+        if (mintNum >= 10) return;
         setMintNum(mintNum + 1);
         // if (mintNum == 25) return;
     }
@@ -78,37 +78,25 @@ function Mint() {
     }
     return (
         <div className='mint-control' id='mint'>
-            <Container>
-                <Row>
-                    <Col md={6} xs={12} className='mint-image'>
-                        <img src={MintGif} alt='mint gif' />
-                    </Col>
-                    <Col md={6} xs={12} className='mint-description'>
-                        <header>MINT YOUR <text style={{ color: "#88CDDB" }}>SOCIAL OWL</text>
-                        </header>
+            <Container style={{ textAlign: "center", backgroundColor: "white", border: "10px solid darkcyan", borderRadius: "20px" }}>
+                {/* USE THIS ONCE MINTING IS LIVE <img className="mintimage" src={"https://cdn.discordapp.com/attachments/197452746293641216/920889809860448276/DeadBanditz_MintNow-01.png"} alt='mint gif' /> */}
+                {/* <img className="mintimage" src={"https://github.com/DeadBanditz/banditzsite/blob/main/src/assets/DB_MintBanner-01.png?raw=true"} alt='mint gif' /> */}
+                <Row style={{ textAlign: "center" }}>
+                    <text className='mint-description'>
+                        {/* <header><text style={{ color: "#E8B331" }}><br/></text>
+                    </header> */}
                         <p style={{ textAlign: "center" }}>
-
-                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-                        Lorem ipsum Lorem ipsum 
-                            <br/><br/>
-                            Lorem ipsum Lorem ipsum 
-                            {/* <text style={{fontWeight: "bold"}}>
-                                <a style={{textDecoration: "none", color: "white", fontWeight: 900, fontSize: 20}}href="https://instagram.com/dickpixnft"> Instagram </a>
-                            </text> 
-                            and 
-                            <text style={{fontWeight: "bold"}}>
-                                <a style={{textDecoration: "none", color: "white", fontWeight: 900, fontSize: 20}}href="https://twitter.com/thedickpixnft"> Twitter!</a>
-                            </text> */}
-                            </p>
+                            <text style={{ fontFamily: "impact", fontSize: 80, }}>MINT NOW!</text><br />
+                            <text style={{ fontFamily: "impact", }}>
+                                Mint your official CryptoilETHs NFT now!
+                            </text>
+                        </p>
                         <div className='number-control'>
-                            <BsFileMinusFill color='white' size={40} onClick={() => minus_num()} />
+                            <BsFileMinusFill color='black' size={40} onClick={() => minus_num()} />
                             <span id="inputBox">{mintNum}</span>
-                            <BsFilePlusFill color='white' size={40} onClick={() => plus_num()} />
+                            <BsFilePlusFill color='black' size={40} onClick={() => plus_num()} />
                         </div>
-                        <p style={{marginTop: 0, marginBottom: 0}}>0.077 ETH + Gas</p>
+                        <p style={{ marginTop: 0, marginBottom: 0 }}>0.0269 ETH + Gas</p>
                         {
                             blockchain.account === "" || blockchain.smartContract === null ?
                                 <div className="flex-column">
@@ -134,10 +122,10 @@ function Mint() {
                                         getData();
                                     }}>{claimingNft ? "BUSY" : "MINT"}</button>
                         }
-                    </Col>
+                    </text>
                 </Row>
-            </Container>
-        </div>
+            </Container >
+        </div >
     );
 }
 

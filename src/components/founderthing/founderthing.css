@@ -1,8 +1,17 @@
 .about-control {
-    background-color: #172A55;
+    background-image: url(../../assets/btile.png);
     padding-top: 60px;
     padding-bottom: 60px;
     font-weight: 900;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-top: 5px solid #68c2c5;
+    border-bottom: 10px solid #68c2c5;
+}
+
+@font-face {
+    font-family: casinofont;
+    src: url(../../assets/fonts/impact.ttf);
 }
 
 .image-control img {
@@ -16,16 +25,18 @@
 }
 
 .about-description header {
-    font-size: 50px;
+    font-size: 60px;
     line-height: 50px;
     color: #88CDDB;
-    font-style: italic;
+    /* font-style: none; */
     font-weight: 900;
     margin-bottom: 10px;
+    margin-top: 20px;
+    font-family: casinofont;
 }
 
 .about-description p {
-    color: rgb(255, 255, 255);
+    color: black;
 }
 
 .about-description p span {
@@ -36,4 +47,25 @@
     color: #ffffff;
 }
 
+@media (min-width: 767px) {
+    .about-control {
+        background-image: url(../../assets/btile.png); 
+        padding-top: 60px;
+        padding-bottom: 60px;
+        font-weight: 900;
+        margin: 0px;
+    
+    }
+
+    .about-description header {
+        font-size: 50px;
+        line-height: 50px;
+        color: #88CDDB;
+        /* font-style: none; */
+        font-weight: 900;
+        margin-bottom: 10px;
+        font-family: casinofont;
+    }
+
+}
 
