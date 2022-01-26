@@ -15,7 +15,7 @@ class Footer extends React.Component {
         return (
             <div className='footer-control' id="socials">
                 <Container className='footer'>
-                    <p><a target="_blank" rel="noopener noreferrer" href="https://metaversesolutions.ai/" style={{ textDecoration: "none", color: "darkcyan", textAlign: "left" }}> <text className="banditz">© 2022 The NFT Lottery. All Rights Reserved</text>
+                    <p><a target="_blank" rel="noopener noreferrer" href="https://metaversesolutions.ai/" style={{ textDecoration: "none", color: "darkcyan", textAlign: "left" }}> <text className="banditz">© 2022 CryptoilETHs. All Rights Reserved</text>
                     </a></p>
                     <div>
                         {/* <a style={{textDecoration: "none", color:"white"}}target="_blank" rel="noopener noreferrer"href="https://instagram.com/"> <BsInstagram size={32} /></a>
